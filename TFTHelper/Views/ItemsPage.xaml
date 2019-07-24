@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="TFTHelper.Views.ItemsPage" BackgroundColor="#113355" Title="Items" x:Name="BrowseItemsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Help" Clicked="Help_Clicked"/>
+    </ContentPage.ToolbarItems>
+      
+    <RelativeLayout BackgroundColor="Transparent">
+        <Image Aspect="AspectFill"
+        Source="https://vignette.wikia.nocookie.net/leagueoflegends/images/b/b5/Howling_Abyss_Landscape.png/revision/latest/scale-to-width-down/1000?cb=20170303155408"
+              
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=1,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=1,Constant=0}"/>
+          
+        <ScrollView  Orientation="Horizontal" 
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.01,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.05,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.9,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.1,Constant=0}">
+            
+            <StackLayout Orientation="Horizontal" 
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=1,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.05,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=1,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=.08,Constant=0}">
+                
+                <ImageButton Source="https://cdn.leagueofgraphs.com/img/tft/items/1.png" Clicked="Handle_Item1Click" x:Name="item1"
+                    HeightRequest="50" WidthRequest="55" BorderWidth="1" BorderColor="White" BackgroundColor="Silver" Aspect="AspectFill"
+                />
+                <ImageButton Source="https://cdn.leagueofgraphs.com/img/tft/items/2.png" Clicked="Handle_Item2Click" x:Name="item2"
+                    HeightRequest="50" WidthRequest="55" BorderWidth="1" BorderColor="White" BackgroundColor="Silver" Aspect="AspectFill"      
+                     />
+                <ImageButton Source="https://cdn.leagueofgraphs.com/img/tft/items/3.png" Clicked="Handle_Item3Click" x:Name="item3"
+                    HeightRequest="50" WidthRequest="55" BorderWidth="1" BorderColor="White" BackgroundColor="Silver" Aspect="AspectFill"
+                     />
+                <ImageButton Source="https://cdn.leagueofgraphs.com/img/tft/items/4.png" Clicked="Handle_Item4Click" x:Name="item4"
+                    HeightRequest="50" WidthRequest="55" BorderWidth="1" BorderColor="White" BackgroundColor="Silver" Aspect="AspectFill"       
+                     />
+                <ImageButton Source="https://cdn.leagueofgraphs.com/img/tft/items/5.png" Clicked="Handle_Item5Click" x:Name="item5"
+                    HeightRequest="50" WidthRequest="55" BorderWidth="1" BorderColor="White" BackgroundColor="Silver" Aspect="AspectFill"
+                     />
+                <ImageButton Source="https://cdn.leagueofgraphs.com/img/tft/items/6.png" Clicked="Handle_Item6Click" x:Name="item6"
+                    HeightRequest="50" WidthRequest="55" BorderWidth="1" BorderColor="White" BackgroundColor="Silver" Aspect="AspectFill"      
+                     />
+                <ImageButton Source="https://cdn.leagueofgraphs.com/img/tft/items/7.png" Clicked="Handle_Item7Click" x:Name="item7"
+                    HeightRequest="50" WidthRequest="55" BorderWidth="1" BorderColor="White" BackgroundColor="Silver" Aspect="AspectFill"
+                     />
+                <ImageButton Source="https://cdn.leagueofgraphs.com/img/tft/items/8.png" Clicked="Handle_Item8Click" x:Name="item8"
+                    HeightRequest="50" WidthRequest="55" BorderWidth="1" BorderColor="White" BackgroundColor="Silver"       
+                     />
+            </StackLayout>
+        </ScrollView>
+        
+        <!-- 
+        This scroll view is where the items will be when selected by the buttons
+        Each list of items will have a (item) + (item) -> (item) format
+        
+        -->
+        <ScrollView BackgroundColor="#4affffff" x:Name="itemBox" Orientation="Vertical"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=1,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.05,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=.9,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=.8,Constant=0}">
+            <StackLayout Orientation="Vertical" x:Name="itemContainer" Padding="10">
+                <Label HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large" x:Name="itemName" TextColor="White"/>
+                <Label HorizontalTextAlignment="Center" FontSize="Medium" x:Name="itemDescription" TextColor="White"/>
+                <StackLayout Orientation="Vertical" BackgroundColor="#7a222222"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.9,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}">
+                    <Label HorizontalTextAlignment="Center" FontSize="Medium" x:Name="combinedName1" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="recipe1" HeightRequest="75" Margin="5">
+                        
+                    </StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="Small" x:Name="combinedDesc1" TextColor="White"/>
+                </StackLayout> 
+                <StackLayout Orientation="Vertical" BackgroundColor="#7a222222"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.9,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}">
+                    <Label HorizontalTextAlignment="Center" FontSize="Medium" x:Name="combinedName2" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="recipe2" HeightRequest="75" Margin="5">
+                        
+                    </StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="Small" x:Name="combinedDesc2" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" BackgroundColor="#7a222222"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.9,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}">
+                    <Label HorizontalTextAlignment="Center" FontSize="Medium" x:Name="combinedName3" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="recipe3" HeightRequest="75" Margin="5">
+                        
+                    </StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="Small" x:Name="combinedDesc3" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" BackgroundColor="#7a222222"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.9,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}">
+                    <Label HorizontalTextAlignment="Center" FontSize="Medium" x:Name="combinedName4" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="recipe4" HeightRequest="75" Margin="5">
+                        
+                    </StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="Small" x:Name="combinedDesc4" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" BackgroundColor="#7a222222"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.9,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}">
+                    <Label HorizontalTextAlignment="Center" FontSize="Medium" x:Name="combinedName5" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="recipe5" HeightRequest="75" Margin="5">
+                        
+                    </StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="Small" x:Name="combinedDesc5" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" BackgroundColor="#7a222222"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.9,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}">
+                    <Label HorizontalTextAlignment="Center" FontSize="Medium" x:Name="combinedName6" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="recipe6" HeightRequest="75" Margin="5">
+                        
+                    </StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="Small" x:Name="combinedDesc6" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" BackgroundColor="#7a222222"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.9,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}">
+                    <Label HorizontalTextAlignment="Center" FontSize="Medium" x:Name="combinedName7" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="recipe7" HeightRequest="75" Margin="5">
+                        
+                    </StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="Small" x:Name="combinedDesc7" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" BackgroundColor="#7a222222"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.9,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}">
+                    <Label HorizontalTextAlignment="Center" FontSize="Medium" x:Name="combinedName8" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="recipe8" HeightRequest="75" Margin="5">
+                        
+                    </StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="Small" x:Name="combinedDesc8" TextColor="White"/>
+                </StackLayout>
+            </StackLayout>
+            
+                
+        </ScrollView>
+    </RelativeLayout>
+    
+</ContentPage>

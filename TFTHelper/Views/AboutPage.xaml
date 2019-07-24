@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="TFTHelper.Views.AboutPage" xmlns:vm="clr-namespace:TFTHelper.ViewModels" Title="Champions">
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+   
+    
+    
+    <RelativeLayout x:Name="bigDaddyContainny" 
+            >
+        
+        <Image Aspect="AspectFill" ScaleX="-1"
+        Source="https://vignette.wikia.nocookie.net/leagueoflegends/images/b/b5/Howling_Abyss_Landscape.png/revision/latest/scale-to-width-down/1000?cb=20170303155408"
+              
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=1,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=1,Constant=0}"/>
+        
+        <StackLayout Orientation="Horizontal" x:Name="filterHolder" BackgroundColor="Transparent"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.115,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.05,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.9,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.09,Constant=0}">
+           <!-- <Button Text="Clear" FontSize="Small" BackgroundColor="#4aFFFFFF" TextColor="White" Clicked="Handle_ClearClicked" HorizontalOptions="End"/>
+        -->
+            </StackLayout>
+        <ScrollView Orientation="Horizontal"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.01,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.05,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.9,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.1,Constant=0}">
+            
+            
+            <StackLayout Orientation="Horizontal" x:Name="ChampionContainer"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=.1,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.05,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=1,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=1,Constant=0}">
+                
+            </StackLayout>    
+        </ScrollView>
+        
+        <ScrollView BackgroundColor="#4affffff" Padding="10"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.42,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.05,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.9,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.5,Constant=0}">
+            
+            
+            <StackLayout x:Name="compHolder" Orientation="Vertical"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.05,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.05,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.9,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.9,Constant=0}">
+                
+            </StackLayout>
+        </ScrollView>
+         
+            
+            
+            
+            <!-- https://cdn.leagueofgraphs.com/img/tft/origins/demon.png -->
+        <!-- <ImageButton Source="https://img.icons8.com/plasticine/2x/close-window.png" x:Name="Delete" BackgroundColor="Transparent"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.01,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.87,Constant=5}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0.1,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0.08,Constant=0}"
+            /> 
+        -->
+        
+        
+        <ContentView x:Name="championInfoBox" IsVisible="false" IsEnabled="false" BackgroundColor="#9a222222"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=0,Constant=0}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=0,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Width,Factor=1,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                Property=Height,Factor=1,Constant=0}">
+        <RelativeLayout>
+        
+            <ImageButton Source="https://img.icons8.com/plasticine/2x/close-window.png" Clicked="Handle_BoxClose"
+                x:Name="Delete" BackgroundColor="Transparent" HeightRequest="75" WidthRequest="75"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height,Factor=0.1,Constant=0}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}">   
+           </ImageButton> 
+            
+            <StackLayout Orientation="Vertical" BackgroundColor="Black"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height,Factor=0.25,Constant=0}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.05,Constant=0}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Width,Factor=0.9,Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height,Factor=0.6,Constant=0}">
+                    
+                <StackLayout Orientation="Horizontal">
+                    <Image x:Name="championIconBox" WidthRequest="100" HeightRequest="100" Margin="10"/>
+                    <Label x:Name="championNameBox" FontSize="30" FontAttributes="Bold" TextColor="White" 
+                           VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    
+                    <StackLayout Orientation="Vertical">
+                        <Image x:Name="championType1Box" WidthRequest="25" HeightRequest="25" Margin="5"/>
+                        <Image x:Name="championType2Box" WidthRequest="25" HeightRequest="25" Margin="5"/>
+                        <Image x:Name="championType3Box" WidthRequest="25" HeightRequest="25" Margin="5"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image x:Name="championAbilityBox" WidthRequest="66" HeightRequest="66" Margin="10"/>
+                    <Label x:Name="championAbilityDescriptionBox" FontSize="18" TextColor="White" VerticalTextAlignment="Center" 
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="10"/>
+                </StackLayout>
+                
+                
+                
+            </StackLayout>
+            
+            
+        </RelativeLayout>
+    </ContentView>
+    </RelativeLayout>
+    
+    
+    <!--
+    This is where the information area for each champion will be for anyone wanting more information for each champion 
+    -->
+    
+</ContentPage>

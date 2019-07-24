@@ -1,0 +1,179 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "48f4bdb1308c02d6ed84305c52356f22b2c56380"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "TFTHelper/1.0.0": {
+        "dependencies": {
+          "CarouselView": "7.0.3.1",
+          "CarouselView.FormsPlugin": "5.2.0",
+          "NETStandard.Library": "2.0.3",
+          "Xam.Forms.VideoPlayer": "1.0.2",
+          "Xamarin.Essentials": "1.2.0",
+          "Xamarin.Essentials.Interfaces": "1.1.0",
+          "Xamarin.Forms": "4.1.0.581479"
+        },
+        "runtime": {
+          "TFTHelper.dll": {}
+        }
+      },
+      "CarouselView/7.0.3.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Xamarin.Forms": "4.1.0.581479"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CarouselView.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "CarouselView.FormsPlugin/5.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/CarouselView.FormsPlugin.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Xam.Forms.VideoPlayer/1.0.2": {
+        "dependencies": {
+          "Xamarin.Forms": "4.1.0.581479"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xam.Forms.VideoPlayer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.2.0": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Essentials.Interfaces/1.1.0": {
+        "dependencies": {
+          "Xamarin.Essentials": "1.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Essential.Interfaces.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/4.1.0.581479": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.1.0.287"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.1.0.287"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.1.0.287"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TFTHelper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CarouselView/7.0.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ajh14LBzz4A+UVNbORQaY07F3vRvIyIowYsGAv7R1XKj+OXxYPZnbbBm8xlGgZ0o7r3DnbrA4twiUFiU2KIe7A==",
+      "path": "carouselview/7.0.3.1",
+      "hashPath": "carouselview.7.0.3.1.nupkg.sha512"
+    },
+    "CarouselView.FormsPlugin/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h849lqz0wvmpyiXqCrN7EW+cCGqK5chcefCfS55CkoGMMQx238QWNknUTOl/CvIdZ4bgs0Oztb7kamYXDlQ5mQ==",
+      "path": "carouselview.formsplugin/5.2.0",
+      "hashPath": "carouselview.formsplugin.5.2.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "Xam.Forms.VideoPlayer/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-en1w5FTN1gC2CXkexQcuZFMF3Ww21d05CHZ0bpK+xgNYDXdyXA61D5fGuzU+aFTlw1kl3qqtKRYs+h9q4gOEmQ==",
+      "path": "xam.forms.videoplayer/1.0.2",
+      "hashPath": "xam.forms.videoplayer.1.0.2.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o3i5uAchUpAvAlJX0onYFFiDo6jpKl9vgvrdDtXEuEfum0UDrSx8oGGBUjlFyUoRpvWVumXwo0VS3AbzuwEofg==",
+      "path": "xamarin.essentials/1.2.0",
+      "hashPath": "xamarin.essentials.1.2.0.nupkg.sha512"
+    },
+    "Xamarin.Essentials.Interfaces/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cLwANSx6A65OVO0Fs96QWZpPD8WyhbVGdjW0eKOO38kgC+AX0byO+9AXuYm9aDLbRkt2eMSKoFnkDKoe+F758Q==",
+      "path": "xamarin.essentials.interfaces/1.1.0",
+      "hashPath": "xamarin.essentials.interfaces.1.1.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/4.1.0.581479": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wrO8AOW1xsFoGgT1SUvJ9OEeqAduJOm0xezZGNe0rCiAv2N9Qc/n5uywhlSia1s1k+Zy/hOrhZ4b7/EM6z9oog==",
+      "path": "xamarin.forms/4.1.0.581479",
+      "hashPath": "xamarin.forms.4.1.0.581479.nupkg.sha512"
+    }
+  }
+}

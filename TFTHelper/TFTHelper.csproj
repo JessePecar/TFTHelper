@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.1.0" />
+    <PackageReference Include="CarouselView" Version="7.0.3.1" />
+    <PackageReference Include="CarouselView.FormsPlugin" Version="5.2.0" />
+    <PackageReference Include="Xam.Forms.VideoPlayer" Version="1.0.2" />
+    <PackageReference Include="Forms9Patch" Version="1.8.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\FileVideoSource.cs" />
+    <Compile Remove="Views\ResourceVideoSource.cs" />
+    <Compile Remove="Views\VideoPlayer.cs" />
+    <Compile Remove="Views\VideoSource.cs" />
+    <Compile Remove="Views\VideoSourceConverter.cs" />
+  </ItemGroup>
+</Project>
